@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}"/>
+</head>
+
+<body>
+    <div class="center_on_page">
+        <h1>{{ title }}</h1>
+
+        <table class="center">
+            <tr>
+                <td><strong>SSID:</strong></td>
+                <td>{{ ssid }}</td>
+            </tr>
+            <tr>
+                <td><strong>Password:</strong></td>
+                <td>{{ password }}</td>
+            </tr>
+        </table>
+
+        <img class="qrcode" src="{{ url_for('qrcode_img') }}"/>
+    </div>
+<body>
+
+</html>

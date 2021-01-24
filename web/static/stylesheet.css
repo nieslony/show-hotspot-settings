@@ -1,0 +1,34 @@
+.center_on_page {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+body {
+    background-color: #ccffbb;
+    font-size: 14pt;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: black;
+}
+
+h1 {
+    font-size: 200%;
+    text-align: center;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+img.qrcode {
+    border: 1px solid black;
+
+    display: block;
+    margin: 12pt auto;
+}
