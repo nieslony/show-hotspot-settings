@@ -1,5 +1,5 @@
 Name:       show-hotspot-settings
-Version:    0.1
+Version:    0.2
 Release:    1%{?dist}
 Summary:    Show current hotspot settings in web page
 
