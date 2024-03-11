@@ -25,7 +25,7 @@ install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name}/templates web/te
 install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name}/static  web/static/*
 
 %files
-%{_sysconfdir}/httpd/conf.d/*
+%{_datadir}/%{name}/*
 %{_localstatedir}/www/%{name}
 %license LICENSE
 
