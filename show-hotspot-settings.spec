@@ -17,6 +17,7 @@ Show current hotspot settings in web page from NetworkManager ot hostapd
 %setup
 
 %install
+mkdir -pv %{buildroot}/%{_datadir}/%{name}
 install -D -m 644 -t %{buildroot}/%{_licensedir}/%{name} LICENSE
 install -D -m 644 -t %{buildroot}/%{_datadir}/%{name} apache-config/*
 install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name} web/*{py,wsgi}
