@@ -29,3 +29,5 @@ install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name}/static  web/stat
 %license LICENSE
 
 %changelog
+* Mon Mar 11 2024 Claas Nieslony <github@nieslony.at>
+- Add dependencies
