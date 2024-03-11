@@ -27,3 +27,5 @@ install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name}/static  web/stat
 %{_sysconfdir}/httpd/conf.d/*
 %{_localstatedir}/www/%{name}
 %license LICENSE
+
+%changelog
