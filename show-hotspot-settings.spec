@@ -13,13 +13,12 @@ Requires: httpd
 %description
 Show current hotspot settings in web page from NetworkManager ot hostapd
 
-
 %prep
 %setup
 
 %install
 install -D -m 644 -t %{buildroot}/%{_licensedir}/%{name} LICENSE
-install -D -m 644 -t %{buildroot}/%{_sysconfdir}/httpd/conf.d apache-config/*
+install -D -m 644 -t %{buildroot}/%{_datadir}/%{name} apache-config/*
 install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name} web/*{py,wsgi}
 install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name}/templates web/templates/*
 install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name}/static  web/static/*
