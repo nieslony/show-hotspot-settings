@@ -1,5 +1,5 @@
 Name:       show-hotspot-settings
-Version:    0.2.2
+Version:    0.2.3
 Release:    1%{?dist}
 Summary:    Show current hotspot settings in web page
 
@@ -30,6 +30,9 @@ install -D -m 644 -t %{buildroot}/%{_localstatedir}/www/%{name}/static  web/stat
 %license LICENSE
 
 %changelog
+* Fri Mar 15 2024 Claas Nieslony <github@nieslony.at>
+- Fix: directory name (github@nieslony.at)
+
 * Mon Mar 11 2024 Claas Nieslony <github@nieslony.at>
 - Install apache config to /usr/share/... (github@nieslony.at)
 
