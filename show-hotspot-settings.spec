@@ -35,8 +35,10 @@ echo %{name}-%{pypi_version}
 
 %install
 %py3_install
-mkdir -pv $RPM_BUILD_ROOT/var/www/%{name}
+mkdir -pv $RPM_BUILD_ROOT/var/www/%{name}/{static,templates}
 install show-hotspot-settings.wsgi $RPM_BUILD_ROOT/var/www/%{name}
+install %{pypi_name}/web/static/* $RPM_BUILD_ROOT/var/www/%{name}/static
+install %{pypi_name}/web/templates/* $RPM_BUILD_ROOT/var/www/%{name}/templates
 
 mkdir -p $RPM_BUILD_ROOT/%{_datadir}/%{name}
 install apache-config/show-hotspot-settings.conf $RPM_BUILD_ROOT/%{_datadir}/%{name}
