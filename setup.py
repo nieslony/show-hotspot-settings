@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
    name='showhotspotsettings',
-   version='0.2.3',
+   version='0.3',
    description='A useful module',
    author='Claas Nieslony',
    author_email='foomail@foo.example',
