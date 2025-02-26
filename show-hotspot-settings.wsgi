@@ -7,6 +7,8 @@ import os
 sys.path.insert(0, os.path.dirname(__file__))
 from showhotspotsettings.web import create_app
 
+DEF_HOSTAPD_CONF = "/etc/hostapd/hostapd.conf"
+
 def main():
     parser = argparse.ArgumentParser(description="Show hotspot credentials on website")
     parser.add_argument("--environment", "-e",
@@ -16,7 +18,7 @@ def main():
                         )
     parser.add_argument("--config", "-c",
                         help="Position of hostapd.conf",
-                        default="/etc/hostapd/hostapd.conf"
+                        default=DEF_HOSTAPD_CONF
                         )
     parser.add_argument("--listen", "-l",
                         help="Listen on given IP address",
@@ -45,6 +47,7 @@ else:
     args = {
         "static_folder": f"{my_dir}/static",
         "template_folder": f"{my_dir}/templates",
+        "hostapd_conf": DEF_HOSTAPD_CONF
         }
 
     application = create_app(**args)
