@@ -1,7 +1,7 @@
 %global pypi_name showhotspotsettings
 
 Name:           show-hotspot-settings
-Version:        0.3.1
+Version:        0.3.2
 Release:        1%{?dist}
 Summary:        Show current hotspot settings in web page
 
@@ -54,6 +54,10 @@ install apache-config/show-hotspot-settings.conf $RPM_BUILD_ROOT/%{_datadir}/%{n
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
+* Wed Feb 26 2025 Claas Nieslony <claas@nieslony.at> 0.3.2-1
+- Get version from spec (claas@nieslony.at)
+- Add static and templates (claas@nieslony.at)
+
 * Wed Feb 26 2025 Claas Nieslony <claas@nieslony.at> 0.3.1-1
 - 
 
