@@ -1,9 +1,11 @@
+#!/usr/bin/python3
+
 import argparse
 import sys
 import os
 
-#sys.path.insert(0, os.path.dirname(__file__))
-from shothotspotsettings.web import create_app
+sys.path.insert(0, os.path.dirname(__file__))
+from showhotspotsettings.web import create_app
 
 def main():
     parser = argparse.ArgumentParser(description="Show hotspot credentials on website")
@@ -28,15 +30,12 @@ def main():
     args = parser.parse_args()
 
     os.environ["FLASK_ENV"] = args.environment
-    if "config" in args:
-        os.environ["CONFIG_PATH"] = args.config
-
-    app = create_app()
-    app.logger.info("Created app from min function")
+    app = create_app(hostapd_conf=args.config)
+    app.logger.setLevel("INFO")
+    app.logger.info("Created app from main function")
     app.run(host=args.listen, port=args.port)
 
 if __name__ == "__main__":
-    print("main")
     # run from command line
     main()
 else:
@@ -49,4 +48,3 @@ else:
         }
 
     application = create_app(**args)
-    application.default_config_path = f"{my_dir}/rpmindex.yml"
