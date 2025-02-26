@@ -4,10 +4,10 @@ from flask import Flask, render_template, send_file
 from io import BytesIO
 import qrcode
 
-app = Flask(__name__)
-hostapd_conf = "/etc/hostapd/hostapd.conf"
-ssid = ""
-password = ""
+# app = Flask(__name__)
+# hostapd_conf = "/etc/hostapd/hostapd.conf"
+# ssid = ""
+# password = ""
 
 def init():
     global ssid, password
@@ -44,8 +44,3 @@ def qrcode_img():
     img.save(stream)
     stream.seek(0)
     return send_file(stream, mimetype='image/png')
-
-init()
-
-if __name__ == "__main__":
-    app.run(debug=True)
